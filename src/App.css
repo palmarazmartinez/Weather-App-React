@@ -1,0 +1,49 @@
+body {
+    background: radial-gradient( circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+.container {
+    display: block;
+    background-image: linear-gradient( 108.5deg, rgb(30, 59, 94) 4%, rgb(253, 29, 62) 49.3%, rgb(255, 224, 94) 96%);
+    margin: 2em auto;
+    padding: 20px;
+    max-width: 900px;
+    max-height: 1000px;
+    border-color: #404c58;
+    font-family: "Sora", sans-serif;
+}
+
+.blue-drop-pin {
+    padding: 0px;
+}
+
+.todaysDate,
+.displayTime {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0 auto;
+    color: #f0eeef;
+}
+
+.dailyWeatherHeading {
+    padding-top: 10px;
+    text-align: center;
+    display: block;
+    left: 80px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: #f0eeef;
+}
+
+#sixDaysWeather {
+    padding: 0px 30px 10px 20px;
+    margin: 0 auto;
+}
+
+#rowDesign {
+    margin-top: 0px;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 0px;
+}
