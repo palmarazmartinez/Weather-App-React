@@ -32,6 +32,7 @@ body {
     display: block;
     left: 80px;
     margin-top: 20px;
+    margin-right: -110px;
     margin-bottom: 0px;
     color: #f0eeef;
 }
