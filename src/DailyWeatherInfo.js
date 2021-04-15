@@ -5,34 +5,36 @@ import "./DailyWeatherInfo.css";
 import clear from "./images/clear.svg";
 
 export default function DailyWeatherInfo(props) {
-    return ( <div className= "weatherColumn">
-        <Row className= "row border" id= "styleRows">
-        <Col className= "col-6 col-md-4" id= "daySpace">
-        <p className= "nextDay"> { props.day } </p> 
+  return (
+    <div className="weatherColumn">
+      <Row className="row border" id="styleRows">
+        <Col className="col-6 col-md-4" id="daySpace">
+          <p className="nextDay"> {props.day} </p>
         </Col>
 
-        <Col className= "col-6 col-sm-3" id= "weatherSpace">
-        <img src= { clear } className= "clear"/>
-        <p className= "minMaxTemp">
-        Max: { props.maxTemp }°F
-        <br />
-        Min: { props.minTemp }°F 
-        </p> 
-        </Col>
-
-        <Col className= "col-6 col-md-5" id= "tempSpace">
-        <p className= "dailyDescribeWeather">
-        <i> { props.weatherDescription } </i> 
+        <Col className="col-6 col-sm-3" id="weatherSpace">
+          <img src={clear} className="clear" alt="weather-icon" />
+          <p className="minMaxTemp">
+            Max: {props.maxTemp}°F
+            <br />
+            Min: {props.minTemp}°F
           </p>
-          <p className="dailyHumidityText"> {" "}
-            <i className= "fas fa-tint" id= "dailyHumidityIcon">
-            </i> Humidity: {props.dailyHumidity}%{" "} </p>
-          <p className="dailyWindText"> {" "}
-            <i className= "fas fa-wind" id= "dailyWindIcon"></i> Wind:{" "} { props.dailyWind }
-        km / h { " " } 
-        </p> 
-        </Col> 
-        </Row> 
-        </div>
-    );
+        </Col>
+
+        <Col className="col-6 col-md-5" id="tempSpace">
+          <p className="dailyDescribeWeather">
+            <i> {props.weatherDescription} </i>
+          </p>
+          <p className="dailyHumidityText">
+            {" "}
+            <i className="fas fa-tint" id="dailyHumidityIcon"></i> Humidity: {props.dailyHumidity}%{" "}
+          </p>
+          <p className="dailyWindText">
+            {" "}
+            <i className="fas fa-wind" id="dailyWindIcon"></i> Wind: {props.dailyWind} km/h{" "}
+          </p>
+        </Col>
+      </Row>
+    </div>
+  );
 }
