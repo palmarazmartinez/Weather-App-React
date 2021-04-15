@@ -4,12 +4,12 @@ export default function TodaysDate() {
   return (
     <div className="todaysDate">
       <p className="todayIs">
-        TUESDAY
+        FRIDAY
         <br />
-        March 23, 2021
+        APRIL 16, 2021
         <br />
       </p>
-      <p className="displayTime">8:09 PM</p>
+      <p className="displayTime">9:04 PM</p>
     </div>
   );
 }
