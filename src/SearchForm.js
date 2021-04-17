@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchForm.css";
-import location from "./images/location.png";
+import pin from "./images/pin.png";
 import { Form, Button } from "react-bootstrap";
 
 export default function SearchForm() {
@@ -12,7 +12,7 @@ export default function SearchForm() {
           className="btn btn-outline-light btn-sm"
           id="exact-location-btn"
         >
-          <img src={location} alt="blue-drop-pin" className="blueDropPin" />
+          <img src={pin} alt="blue-drop-pin" className="blueDropPin" />
         </Button>{" "}
         <input
           type="search"
