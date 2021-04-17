@@ -1,6 +1,6 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
-import clouds from "./images/clouds.svg";
+import ReactAnimatedWeather from "react-animated-weather"
 
 import "./CurrentLocation.css";
 
@@ -18,7 +18,12 @@ export default function CurrentLocation() {
           </a>
         </p>
         <i id="circleIcon"> </i>
-        <img src={clouds} className="clouds" alt="weather-icon-img" />
+        <ReactAnimatedWeather
+        icon="CLOUDY"
+        color="#fe346e"
+        size={115}
+        animate={true}
+      />
         <p id="describeWeather"> Clouds </p>
         <p className="temperatureInfo"> </p>
         <p id="humidity"> Humidity: 33% </p>

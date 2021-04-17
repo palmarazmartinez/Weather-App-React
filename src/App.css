@@ -1,5 +1,6 @@
 body {
     background: radial-gradient( circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+    padding-right:50px;
 }
 
 .container {
@@ -20,10 +21,9 @@ body {
 .todaysDate,
 .displayTime {
     text-align: center;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bolder;
-    margin: 0 auto;
-    color: #f0eeef;
+    color: #f9fcfb;
 }
 
 .dailyWeatherHeading {
@@ -32,14 +32,15 @@ body {
     display: block;
     left: 80px;
     margin-top: 20px;
-    margin-right: -110px;
+    margin-right: -125px;
     margin-bottom: 0px;
-    color: #f0eeef;
+    font-size: 40px;
+    color: #f9fcfb;
 }
 
 #sixDaysWeather {
-    padding: 0px 30px 10px 20px;
-    margin: 0 auto;
+    padding: 0px;
+    margin-top: -20px;
 }
 
 #rowDesign {

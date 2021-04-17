@@ -2,7 +2,7 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./DailyWeatherInfo.css";
-import clear from "./images/clear.svg";
+import ReactAnimatedWeather from "react-animated-weather"
 
 export default function DailyWeatherInfo(props) {
   return (
@@ -13,7 +13,12 @@ export default function DailyWeatherInfo(props) {
         </Col>
 
         <Col className="col-6 col-sm-3" id="weatherSpace">
-          <img src={clear} className="clear" alt="weather-icon" />
+        <ReactAnimatedWeather
+        icon="CLEAR_DAY"
+        color="#fe346e"
+        size={50}
+        animate={true}
+      />
           <p className="minMaxTemp">
             Max: {props.maxTemp}°F
             <br />

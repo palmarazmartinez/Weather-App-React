@@ -1,5 +1,5 @@
 .rounded-circle {
-  background-color: white;
+  background-color: #f7f7f7;
   margin-top: 100px;
   border-radius: 50%;
   width: 450px;
@@ -14,35 +14,32 @@
   text-align: center;
   margin-top: 45px;
   font-size: 55px;
-  color: #a90c2f;
+  color:  #591fce;
 }
 
 .currentTemp {
-  font-size: 45px;
+  font-size: 50px;
+  margin-bottom: 0px;
 }
 
 #realWeatherInfo {
   text-align: center;
-  color: #e6815e;
+  color: #068b78;
   padding: 0px 12px;
-}
-
-.clouds {
-  height: 100px;
-  width: 100px;
 }
 
 #describeWeather {
   text-align: center;
   font-style: italic;
   font-size: 32px;
-  margin-top: 10px;
-  color: #5e5e5e;
+  margin-top: 0px;
+  color: #303841;
 }
 
 #humidIcon,
 #windIcon {
   position: relative;
+  margin-top:3px;
   margin-left: -120px;
   color: #154fab;
 }
@@ -52,7 +49,7 @@
   position: relative;
   margin-left: 5px;
   margin-bottom: 0px;
-  margin-top: -25px;
+  margin-top: -18px;
   color: #154fab;
   font-size: 18px;
 }
@@ -60,7 +57,7 @@
 #fahrenheit-link,
 #celsius-link {
   text-decoration: none;
-  color: #e6815e;
+  color: #068b78;
   font-weight: 300;
   font-size: 30px;
 }
