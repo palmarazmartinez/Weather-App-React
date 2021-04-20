@@ -1,15 +1,19 @@
 import React,{useState} from "react";
 import axios from "axios";
 import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import ReactAnimatedWeather from "react-animated-weather"
 
 import "./CurrentLocation.css";
+import TodaysDate from "./TodaysDate";
+import SearchForm from "./SearchForm";
+
 
 export default function CurrentLocation(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
 
   function handleResponse(response) {
-    console.log(response.data);
+    //console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -18,10 +22,21 @@ export default function CurrentLocation(props) {
       wind: response.data.wind.speed,
       //city: response.data.main.name,
       //icon: response.data.weather[0].icon,
+      date: new Date(response.data.dt * 1000),
     });
   }
   if (weatherData.ready) {
     return (
+      <div calssName="mainWeatherAppInfo">
+      <Row className="row">
+      <Col className="col">
+        <TodaysDate date={weatherData.date}/>
+      </Col>
+      <Col className="col-sm-8">
+        <SearchForm />
+        <h2 className="dailyWeatherHeading">The Next Six Days</h2>
+      </Col>
+    </Row>
       <Col className="col" id="realWeatherInfo">
         <div className="rounded-circle">
           <h1 className="currentLocation"> Chicago</h1>
@@ -46,7 +61,8 @@ export default function CurrentLocation(props) {
           <br />
           <p id="wind"> Wind: {Math.round(weatherData.wind)} km/h </p>
         </div>
-      </Col>
+        </Col>
+        </div>
     );
   }else{
     const apiKey = `51ea909910c3284455f83b220441cc78`;

@@ -58,3 +58,6 @@ export default function WeatherAppMain() {
     </div>
   );
 }
+
+
+//might be redundant file. Removal to be determined.
