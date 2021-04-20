@@ -23,7 +23,7 @@ export default function App() {
         </Col>
       </Row>
       <Row className="row" id="rowDesign">
-        <CurrentLocation />
+        <CurrentLocation defaultCity="Chicago" />
         <Col className="col text-center column2" id="sixDaysWeather">
           <WeatherAppMain />
         </Col>

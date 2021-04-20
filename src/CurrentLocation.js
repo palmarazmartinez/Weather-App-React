@@ -5,7 +5,7 @@ import ReactAnimatedWeather from "react-animated-weather"
 
 import "./CurrentLocation.css";
 
-export default function CurrentLocation() {
+export default function CurrentLocation(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
 
   function handleResponse(response) {
@@ -16,7 +16,7 @@ export default function CurrentLocation() {
       description: response.data.weather[0].main,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      city: response.data.main.name,
+      //city: response.data.main.name,
       //icon: response.data.weather[0].icon,
     });
   }
@@ -24,7 +24,7 @@ export default function CurrentLocation() {
     return (
       <Col className="col" id="realWeatherInfo">
         <div className="rounded-circle">
-          <h1 className="currentLocation"> Chicago </h1>
+          <h1 className="currentLocation"> Chicago</h1>
           <p className="currentTemp">
             <a id="realTemp">
               {Math.round(weatherData.temperature)}{" "}
@@ -50,8 +50,7 @@ export default function CurrentLocation() {
     );
   }else{
     const apiKey = `51ea909910c3284455f83b220441cc78`;
-    let city = `Chicago`;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading..."
