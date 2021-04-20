@@ -2,6 +2,7 @@ import React from "react";
 import DailyWeatherInfo from "./DailyWeatherInfo";
 
 export default function WeatherAppMain() {
+
   return (
     <div className="weatherAppMain">
       <DailyWeatherInfo
