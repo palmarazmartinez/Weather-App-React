@@ -1,6 +1,6 @@
 import "./App.css";
 import WeatherAppDaily from "./WeatherAppDaily";
-import CurrentLocation from "./CurrentLocation";
+import CurrentLocationWeather from "./CurrentLocationWeather";
 import Footer from "./Footer";
 
 
@@ -12,11 +12,12 @@ export default function App() {
   return (
     <Container className="container border border-secondary rounded-3">
       <Row className="row" id="rowDesign">
-        <CurrentLocation defaultCity="Chicago" />
+        <CurrentLocationWeather defaultCity="Chicago" />
+        
         <Col className="col text-center column2" id="sixDaysWeather">
+          <h2 className="dailyWeatherHeading">The Next Six Days</h2>
           <WeatherAppDaily />
         </Col>
-  
       </Row>
       <br />
       <Footer />

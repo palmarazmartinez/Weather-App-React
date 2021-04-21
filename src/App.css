@@ -8,7 +8,7 @@ body {
     background-image: linear-gradient( 108.5deg, rgb(30, 59, 94) 4%, rgb(253, 29, 62) 49.3%, rgb(255, 224, 94) 96%);
     margin: 2em auto;
     padding: 20px;
-    max-width: 80%;
+    max-width: 85%;
     max-height: 100%;
     border-color: #404c58;
     font-family: "Sora", sans-serif;
@@ -18,21 +18,28 @@ body {
     padding: 0px;
 }
 
-.todaysDate,
+.todaysDate {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top:30px;
+    color: #f9fcfb;
+}
+
+
 .displayTime {
     text-align: center;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: bolder;
+    margin: 0 auto;
+    padding: 0 auto;
     color: #f9fcfb;
 }
 
 .dailyWeatherHeading {
-    padding-top: 10px;
     text-align: center;
     display: block;
-    left: 80px;
-    margin-top: 20px;
-    margin-right: -125px;
+    margin-top: -110px;
     margin-bottom: 0px;
     font-size: 40px;
     color: #f9fcfb;
@@ -40,7 +47,7 @@ body {
 
 #sixDaysWeather {
     padding: 0px;
-    margin-top: -20px;
+    margin-top: 120px;
 }
 
 #rowDesign {

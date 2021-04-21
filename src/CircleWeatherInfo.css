@@ -1,6 +1,6 @@
 .rounded-circle {
   background-color: #f7f7f7;
-  margin-top: 100px;
+  margin-top: 15px;
   border-radius: 50%;
   width: 450px;
   height: 450px;
@@ -12,13 +12,14 @@
 
 .currentLocation {
   text-align: center;
-  margin-top: 45px;
-  font-size: 55px;
+  margin-top: 55px;
+  font-size: 45px;
   color:  #591fce;
 }
 
 .currentTemp {
   font-size: 50px;
+  font-weight: 600;
   margin-bottom: 0px;
 }
 
@@ -49,7 +50,7 @@
   position: relative;
   margin-left: 5px;
   margin-bottom: 0px;
-  margin-top: -18px;
+  margin-top: -16px;
   color: #154fab;
   font-size: 18px;
 }
