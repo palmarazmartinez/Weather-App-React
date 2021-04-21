@@ -37,7 +37,10 @@
   color: #303841;
 }
 
-
+.humidIcon, 
+.windIcon{
+  font-size: 15px;
+}
 #humidity,
 #wind {
   position: relative;

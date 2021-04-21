@@ -2,7 +2,12 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./DailyWeatherInfo.css";
-import ReactAnimatedWeather from "react-animated-weather"
+import ReactAnimatedWeather from "react-animated-weather";
+import { faTint,faWind } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
+
 
 export default function DailyWeatherInfo(props) {
   
@@ -33,11 +38,11 @@ export default function DailyWeatherInfo(props) {
             </p>
             <p className="dailyHumidityText">
               {" "}
-              <i className="fas fa-tint" id="dailyHumidityIcon"></i> Humidity: {props.dailyHumidity}%{" "}
+              <FontAwesomeIcon icon={faTint} /> Humidity: {props.dailyHumidity}%{" "}
             </p>
             <p className="dailyWindText">
               {" "}
-              <i className="fas fa-wind" id="dailyWindIcon"></i> Wind: {props.dailyWind} km/h{" "}
+              <FontAwesomeIcon icon={faWind} /> Wind: {props.dailyWind} km/h{" "}
             </p>
           </Col>
         </Row>
