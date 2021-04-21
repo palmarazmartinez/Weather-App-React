@@ -26,9 +26,9 @@ export default function circleWeatherInfo(props) {
           />
           <p id="describeWeather"> {props.data.description} </p>
           <p className="temperatureInfo"> </p>
-          <p id="humidity"> Humidity: {props.data.humidity}% </p>
+          <p id="humidity">Humidity: {props.data.humidity}% </p>
           <br />
-          <p id="wind"> Wind: {Math.round(props.data.wind)} km/h </p>
+          <p id="wind">Wind: {Math.round(props.data.wind)} km/h </p>
         </div>
       </Col>
     </div>
