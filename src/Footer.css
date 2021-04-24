@@ -5,10 +5,11 @@
   margin-right: 100px;
 }
 
-.gitLink {
+.gitLink, .hostLink {
   color: #f0eeef;
 }
 
-.gitLink:hover {
+.gitLink:hover,
+.hostLink:hover {
   color: #626fe6;
 }
