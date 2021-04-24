@@ -1,8 +1,8 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
-import ReactAnimatedWeather from "react-animated-weather";
 import { faTint,faWind } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import WeatherIcons from "./WeatherIcons";
 
 
 export default function circleWeatherInfo(props) {
@@ -20,12 +20,7 @@ export default function circleWeatherInfo(props) {
             </a>
           </p>
           <i id="circleIcon"> </i>
-          <ReactAnimatedWeather
-            icon="CLOUDY"
-            color="#fe346e"
-            size={115}
-            animate={true}
-          />
+          <WeatherIcons code={props.data.icon} size={90}/>
           <p id="describeWeather"> {props.data.description} </p>
           <p className="temperatureInfo"> </p>
          <p id="humidity"> <FontAwesomeIcon icon={faTint} className="humidIcon"/> Humidity: {props.data.humidity}% </p>
