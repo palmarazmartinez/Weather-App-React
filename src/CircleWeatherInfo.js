@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import { faTint,faWind } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import WeatherIcons from "./WeatherIcons";
+import TempConversion from "./TempConversion";
 
 
 export default function circleWeatherInfo(props) {
@@ -12,12 +13,7 @@ export default function circleWeatherInfo(props) {
         <div className="rounded-circle">
           <h1 className="currentLocation"> {props.data.city} </h1>
           <p className="currentTemp">
-            <a id="realTemp">
-              {Math.round(props.data.temperature)}{" "}
-              <small>
-                <a id="fahrenheit-link"> °F </a> |<a id="celsius-link"> °C</a>
-              </small>{" "}
-            </a>
+            <TempConversion fahTemp={props.data.temperature}/>
           </p>
           <i id="circleIcon"> </i>
           <WeatherIcons code={props.data.icon} size={90}/>
