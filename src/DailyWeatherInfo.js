@@ -10,7 +10,7 @@ export default function DailyWeatherInfo() {
     <div className="row" id="dailyInfo">
       <Row className="row border" id="styleRows">
           <Col className="col border-right border-info" id="styleCols">
-          <p className="nextDay"> TUESDAY </p>
+          <p className="nextDay">TUESDAY</p>
           <WeatherIcons code="02d"/>
           <p className="dailyDescribeWeather">
               <i> Clear </i>
@@ -21,7 +21,7 @@ export default function DailyWeatherInfo() {
             </p>
         </Col>
         <Col className="col border-right border-info" id="styleCols">
-          <p className="nextDay"> WEDNESDAY</p>
+          <p className="nextDay">WEDNESDAY</p>
           <WeatherIcons code="02d"/>
           <p className="dailyDescribeWeather">
               <i> Clear </i>
@@ -32,7 +32,7 @@ export default function DailyWeatherInfo() {
             </p>
         </Col>
         <Col className="col border-right border-info" id="styleCols">
-          <p className="nextDay"> THURSDAY</p>
+          <p className="nextDay">THURSDAY</p>
           <WeatherIcons code="02d"/>
           <p className="dailyDescribeWeather">
               <i> Clear </i>
@@ -43,7 +43,7 @@ export default function DailyWeatherInfo() {
             </p>
         </Col>
         <Col className="col border-right border-info" id="styleCols">
-          <p className="nextDay"> FRIDAY</p>
+          <p className="nextDay">FRIDAY</p>
           <WeatherIcons code="02d"/>
           <p className="dailyDescribeWeather">
               <i> Clear </i>
@@ -54,7 +54,7 @@ export default function DailyWeatherInfo() {
             </p>
         </Col>
         <Col className="col border-right border-info" id="styleCols">
-          <p className="nextDay"> SATURDAY</p>
+          <p className="nextDay">SATURDAY</p>
           <WeatherIcons code="02d"/>
           <p className="dailyDescribeWeather">
               <i> Clear </i>
@@ -65,7 +65,7 @@ export default function DailyWeatherInfo() {
             </p>
         </Col>
         <Col className="col" id="styleCols">
-          <p className="nextDay"> SUNDAY</p>
+          <p className="nextDay">SUNDAY</p>
           <WeatherIcons code="02d"/>
           <p className="dailyDescribeWeather">
               <i> Clear </i>
