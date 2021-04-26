@@ -1,9 +1,10 @@
 .rounded-circle {
   background-color: #f7f7f7;
-  margin-top: 15px;
+  margin-top: -70px;
+  margin-left: 360px;
   border-radius: 50%;
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   border-style: solid;
   border-width: thin;
   border-color: #35385a;
@@ -12,13 +13,13 @@
 
 .currentLocation {
   text-align: center;
-  margin-top: 55px;
-  font-size: 45px;
+  margin-top: 35px;
+  font-size: 40px;
   color:  #591fce;
 }
 
 .currentTemp {
-  font-size: 50px;
+  font-size:35px;
   font-weight: 600;
   margin-bottom: 0px;
 }
@@ -32,14 +33,14 @@
 #describeWeather {
   text-align: center;
   font-style: italic;
-  font-size: 32px;
+  font-size: 25px;
   margin-top: 0px;
   color: #303841;
 }
 
 .humidIcon, 
 .windIcon{
-  font-size: 15px;
+  font-size: 10px;
 }
 #humidity,
 #wind {
@@ -48,7 +49,7 @@
   margin-bottom: 0px;
   margin-top: -16px;
   color: #154fab;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 #fahrenheit-link,

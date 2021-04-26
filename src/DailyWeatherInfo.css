@@ -1,52 +1,44 @@
-weatherColumn {
-  padding: 0px 30px 0px 0px;
+#dailyInfo{
+  padding-left: 350px;
+  margin-top: 10px;
+text-align: center;
+}
+
+.dailyWeatherHeading {
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 35px;
+  color: #f9fcfb;
 }
 
 .nextDay {
   font-weight: bolder;
-  margin-top: 40px;
-  margin-bottom: 0px;
+  margin-top: 30px;
+  margin-bottom: 4px;
   color: #591fce;
   font-size: 23px;
 }
 
 .minMaxTemp {
-  color: #303841;
+  color: #154fab;
   font-size: 15px;
-  margin-top: 8px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 .dailyDescribeWeather {
   margin-top: 10px;
+  margin-bottom: 5px;;
   color: #303841;
   font-size: 22px;
 }
 
-.dailyHumidityText,
-.dailyWindText {
-  color: #154fab;
-  margin-bottom: 0px;
-}
 
 #styleRows {
-  border-radius: 40px;
+  border-radius: 30px;
   background-color:#f7f7f7;
-  margin: 0px 30px;
+  margin-bottom: 0px;
+  margin-left: -250px;
 }
 
-#daySapce,
-#weatherSpace {
-  position: relative;
-  width: 100%;
-  padding-right: 0px;
-  padding-left: 25px;
-  margin-top:10px;
-}
-
-#tempSpace {
-  position: relative;
-  width: 100%;
-  padding-right: 45px;
-  padding-left: 15px;
-}

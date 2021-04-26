@@ -6,6 +6,7 @@ import CircleWeatherInfo from "./CircleWeatherInfo";
 import "./SearchForm.css";
 import pin from "./images/pin.png";
 import "./CircleWeatherInfo.css";
+import DailyWeatherInfo from "./DailyWeatherInfo";
 
 
 
@@ -48,37 +49,40 @@ export default function CurrentLocation(props) {
   if (weatherData.ready) {
     return (
       <div calssName="mainWeatherAppInfo">
-        <Row className="row">
-          <Col className="col">
-            <Form id="search-location"
-            onSubmit={handleSubmit}>
-              <Button
-                type="button"
-                className="btn btn-outline-light btn-sm"
-                id="exact-location-btn"
-              >
-                <img src={pin} alt="blue-drop-pin" className="blueDropPin" />
-              </Button>{" "}
-              <input
-                type="search"
-                className="form-control-sm text-center border-info"
-                id="location-input"
-                placeholder="FIND A LOCATION"
-                autocomplete="off"
-                onChange={handleCityChange}
-              />{" "}
-              <input
-                type="submit"
-                className="search-btn btn-outline-light btn-sm"
-                value="🔍"
-              />
-            </Form>
-            <TodaysDate date={weatherData.date} />
-          </Col>
-        </Row>
-        <CircleWeatherInfo data={weatherData}/>
-      </div>
-    );
+      <Row className="row">
+        <Col className="col">
+          <Form id="search-location"
+          onSubmit={handleSubmit}>
+            <Button
+              type="button"
+              className="btn btn-outline-light btn-sm"
+              id="exact-location-btn"
+            >
+              <img src={pin} alt="blue-drop-pin" className="blueDropPin" />
+            </Button>{" "}
+            <input
+              type="search"
+              className="form-control-sm text-center border-info"
+              id="location-input"
+              placeholder="FIND A LOCATION"
+              autocomplete="off"
+              onChange={handleCityChange}
+            />{" "}
+            <input
+              type="submit"
+              className="search-btn btn-outline-light btn-sm"
+              value="🔍"
+            />
+          </Form>
+          <TodaysDate date={weatherData.date} />
+        </Col>
+      </Row>
+        <CircleWeatherInfo data={weatherData} />
+        <h2 className="dailyWeatherHeading">The Next Six Days</h2>
+        <DailyWeatherInfo />
+      
+    </div>
+  );
   }
   else {
     searchLocation();

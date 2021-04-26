@@ -1,52 +1,82 @@
 import React from "react";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Row, Col } from "react-bootstrap";
 import "./DailyWeatherInfo.css";
-import ReactAnimatedWeather from "react-animated-weather";
-import { faTint,faWind } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import WeatherIcons from "./WeatherIcons";
 
 
 
-
-export default function DailyWeatherInfo(props) {
-  
-    return (
-      <div className="weatherColumn">
-        <Row className="row border" id="styleRows">
-          <Col className="col-6 col-md-4" id="daySpace">
-            <p className="nextDay"> {props.day} </p>
-          </Col>
-  
-          <Col className="col-6 col-sm-3" id="weatherSpace">
-          <ReactAnimatedWeather
-          icon="CLEAR_DAY"
-          color="#fe346e"
-          size={50}
-          animate={true}
-        />
-            <p className="minMaxTemp">
-              Max: {props.maxTemp}°F
+export default function DailyWeatherInfo() {
+  return (
+    <div className="row" id="dailyInfo">
+      <Row className="row border" id="styleRows">
+          <Col className="col border-right border-info" id="styleCols">
+          <p className="nextDay"> TUESDAY </p>
+          <WeatherIcons code="02d"/>
+          <p className="dailyDescribeWeather">
+              <i> Clear </i>
+            </p>  <p className="minMaxTemp">
+              Max: 40°F
               <br />
-              Min: {props.minTemp}°F
+              Min: 20°F
             </p>
-          </Col>
-  
-          <Col className="col-6 col-md-5" id="tempSpace">
-            <p className="dailyDescribeWeather">
-              <i> {props.weatherDescription} </i>
+        </Col>
+        <Col className="col border-right border-info" id="styleCols">
+          <p className="nextDay"> WEDNESDAY</p>
+          <WeatherIcons code="02d"/>
+          <p className="dailyDescribeWeather">
+              <i> Clear </i>
+            </p>  <p className="minMaxTemp">
+              Max: 40°F
+              <br />
+              Min: 20°F
             </p>
-            <p className="dailyHumidityText">
-              {" "}
-              <FontAwesomeIcon icon={faTint} /> Humidity: {props.dailyHumidity}%{" "}
+        </Col>
+        <Col className="col border-right border-info" id="styleCols">
+          <p className="nextDay"> THURSDAY</p>
+          <WeatherIcons code="02d"/>
+          <p className="dailyDescribeWeather">
+              <i> Clear </i>
+            </p>  <p className="minMaxTemp">
+              Max: 40°F
+              <br />
+              Min: 20°F
             </p>
-            <p className="dailyWindText">
-              {" "}
-              <FontAwesomeIcon icon={faWind} /> Wind: {props.dailyWind} km/h{" "}
+        </Col>
+        <Col className="col border-right border-info" id="styleCols">
+          <p className="nextDay"> FRIDAY</p>
+          <WeatherIcons code="02d"/>
+          <p className="dailyDescribeWeather">
+              <i> Clear </i>
+            </p>  <p className="minMaxTemp">
+              Max: 40°F
+              <br />
+              Min: 20°F
             </p>
-          </Col>
+        </Col>
+        <Col className="col border-right border-info" id="styleCols">
+          <p className="nextDay"> SATURDAY</p>
+          <WeatherIcons code="02d"/>
+          <p className="dailyDescribeWeather">
+              <i> Clear </i>
+            </p>  <p className="minMaxTemp">
+              Max: 40°F
+              <br />
+              Min: 20°F
+            </p>
+        </Col>
+        <Col className="col" id="styleCols">
+          <p className="nextDay"> SUNDAY</p>
+          <WeatherIcons code="02d"/>
+          <p className="dailyDescribeWeather">
+              <i> Clear </i>
+            </p>  <p className="minMaxTemp">
+              Max: 40°F
+              <br />
+              Min: 20°F
+            </p>
+        </Col>
         </Row>
-      </div>
+  </div>
     );
 
   }
