@@ -6,7 +6,7 @@ import CircleWeatherInfo from "./CircleWeatherInfo";
 import "./SearchForm.css";
 import pin from "./images/pin.png";
 import "./CircleWeatherInfo.css";
-import DailyWeatherInfo from "./DailyWeatherInfo";
+import WeeklyWeatherInfo from "./WeeklyWeatherInfo";
 
 
 
@@ -20,6 +20,7 @@ export default function CurrentLocation(props) {
    console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       description: response.data.weather[0].main,
       humidity: response.data.main.humidity,
@@ -79,7 +80,7 @@ export default function CurrentLocation(props) {
       </Row>
         <CircleWeatherInfo data={weatherData} />
         <h2 className="dailyWeatherHeading">The Next Six Days</h2>
-        <DailyWeatherInfo />
+        <WeeklyWeatherInfo coordinates={weatherData.coordinates}/>
       
     </div>
   );
