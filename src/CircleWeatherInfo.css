@@ -3,8 +3,8 @@
   margin-top: -70px;
   margin-left: 330px;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 410px;
+  height: 410px;
   border-style: solid;
   border-width: thin;
   border-color: #35385a;
@@ -13,7 +13,7 @@
 
 .currentLocation {
   text-align: center;
-  margin-top: 35px;
+  margin-top: 45px;
   font-size: 45px;
   color:  #591fce;
 }
