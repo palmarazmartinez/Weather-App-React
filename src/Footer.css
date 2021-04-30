@@ -1,8 +1,9 @@
 .coder {
-  color: #fcff82;
+ 
+  color: #443758;
   font-weight: bolder;
   margin-top: 0px;
-  margin-right: 100px;
+  margin-left: 275px;
 }
 
 .gitLink, .hostLink {
@@ -11,5 +12,6 @@
 
 .gitLink:hover,
 .hostLink:hover {
-  color: #626fe6;
+  color: #080808;
 }
+
