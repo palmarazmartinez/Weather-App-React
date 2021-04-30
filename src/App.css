@@ -45,3 +45,12 @@ body {
     margin-right: 45px;
     margin-bottom: 0px;
 }
+.reactLoader {
+    display: center;
+    margin-left: 450px;
+}
+.loadText{
+    display: center;
+   color:#f9fcfb;
+   font-size: 50px;
+}

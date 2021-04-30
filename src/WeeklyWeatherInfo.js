@@ -1,8 +1,7 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import "./WeeklyWeatherInfo.css";
-import WeatherIcons from "./WeatherIcons";
 import DayWeatherInfo from "./DayWeatherInfo";
 
 
@@ -10,75 +9,31 @@ export default function DailyWeatherInfo(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecastData, setForecastData] = useState(null);
   
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
+
   function handleResponse(response) {
     setForecastData(response.data.daily);
     setLoaded(true);
 
   }
-
   if (loaded) {
     console.log(forecastData);
     return (
       <div className="row" id="dailyInfo">
-        <Row className="row border" id="styleRows">
-          <Col className="col border-right border-info" id="styleCols">
-           <DayWeatherInfo data={forecastData[0]} />
-          </Col>
-          <Col className="col border-right border-info" id="styleCols">
-            <p className="nextDay">WEDNESDAY</p>
-            <WeatherIcons code="02d" />
-            <p className="dailyDescribeWeather">
-              <i> Clear </i>
-            </p>  <p className="minMaxTemp">
-              Max: 40°F
-              <br />
-              Min: 20°F
-            </p>
-          </Col>
-          <Col className="col border-right border-info" id="styleCols">
-            <p className="nextDay">THURSDAY</p>
-            <WeatherIcons code="02d" />
-            <p className="dailyDescribeWeather">
-              <i> Clear </i>
-            </p>  <p className="minMaxTemp">
-              Max: 40°F
-              <br />
-              Min: 20°F
-            </p>
-          </Col>
-          <Col className="col border-right border-info" id="styleCols">
-            <p className="nextDay">FRIDAY</p>
-            <WeatherIcons code="02d" />
-            <p className="dailyDescribeWeather">
-              <i> Clear </i>
-            </p>  <p className="minMaxTemp">
-              Max: 40°F
-              <br />
-              Min: 20°F
-            </p>
-          </Col>
-          <Col className="col border-right border-info" id="styleCols">
-            <p className="nextDay">SATURDAY</p>
-            <WeatherIcons code="02d" />
-            <p className="dailyDescribeWeather">
-              <i> Clear </i>
-            </p>  <p className="minMaxTemp">
-              Max: 40°F
-              <br />
-              Min: 20°F
-            </p>
-          </Col>
-          <Col className="col" id="styleCols">
-            <p className="nextDay">SUNDAY</p>
-            <WeatherIcons code="02d" />
-            <p className="dailyDescribeWeather">
-              <i> Clear </i>
-            </p>  <p className="minMaxTemp">
-              Max: 40°F
-              <br />
-              Min: 20°F
-            </p>
-          </Col>
+        <Row className="row" id="styleRows">
+          {forecastData.map(function (WeeklyWeatherInfo, index) {
+            if (index < 6){
+              return (
+                <Col className="col border border-info" id="styleCols" key={index}>
+                  <DayWeatherInfo data={WeeklyWeatherInfo} />
+                </Col>
+              );
+            } else {
+              return null;
+            }
+          })}
         </Row>
       </div>
     );

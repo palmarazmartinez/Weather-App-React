@@ -36,8 +36,6 @@ text-align: center;
 
 
 #styleRows {
-  border-radius: 30px;
-  background-color:#f7f7f7;
   margin-bottom: 0px;
   margin-left: -310px;
 }
@@ -45,4 +43,6 @@ text-align: center;
 #styleCols {
   width:175px;
   padding: 0px;
+  background-color: #f9fcfb;
+  border-radius: 40px;
 }

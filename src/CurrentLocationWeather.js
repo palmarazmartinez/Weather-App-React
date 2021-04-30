@@ -3,10 +3,11 @@ import axios from "axios";
 import { Form, Button, Col, Row } from "react-bootstrap";
 import TodaysDate from "./TodaysDate";
 import CircleWeatherInfo from "./CircleWeatherInfo";
+import WeeklyWeatherInfo from "./WeeklyWeatherInfo";
 import "./SearchForm.css";
 import pin from "./images/pin.png";
 import "./CircleWeatherInfo.css";
-import WeeklyWeatherInfo from "./WeeklyWeatherInfo";
+import Loader from "react-loader-spinner";
 
 
 
@@ -37,7 +38,6 @@ export default function CurrentLocation(props) {
   
 }
 
-
   function handleSubmit(event) {
     event.preventDefault();
     searchLocation();
@@ -47,6 +47,22 @@ export default function CurrentLocation(props) {
     setCity(event.target.value);
 }
 
+  
+function geolocationPosition(position) {
+  let Lat = position.coords.latitude;
+  let Lon = position.coords.longitude;
+  const apiKey = `51ea909910c3284455f83b220441cc78`;
+  let geoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${Lat}&lon=${Lon}&appid=${apiKey}&units=imperial`;
+  axios.get(geoUrl).then(handleResponse);
+}
+
+  function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(geolocationPosition);
+}
+  
+  
+  
   if (weatherData.ready) {
     return (
       <div calssName="mainWeatherAppInfo">
@@ -57,9 +73,10 @@ export default function CurrentLocation(props) {
             <Button
               type="button"
               className="btn btn-outline-light btn-sm"
-              id="exact-location-btn"
+                id="exact-location-btn"
+                onClick={getCurrentLocation}
             >
-              <img src={pin} alt="blue-drop-pin" className="blueDropPin" />
+                <img src={pin} alt="blue-drop-pin" className="blueDropPin"/>
             </Button>{" "}
             <input
               type="search"
@@ -79,7 +96,7 @@ export default function CurrentLocation(props) {
         </Col>
       </Row>
         <CircleWeatherInfo data={weatherData} />
-        <h2 className="dailyWeatherHeading">The Next Six Days</h2>
+        <h2 className="dailyWeatherHeading">Your Daily Weather</h2>
         <WeeklyWeatherInfo coordinates={weatherData.coordinates}/>
       
     </div>
@@ -87,6 +104,18 @@ export default function CurrentLocation(props) {
   }
   else {
     searchLocation();
-    return "Loading..."
+    return (
+      
+      <div className="reactLoader">
+        <h1 className="loadText">LOADING</h1>
+        <Loader
+          type="ThreeDots"
+          color="#f9fcfb"
+          height={200}
+          width={200}
+          timeout={3000}
+        /></div>
+        
+      );
+    }
   }
-}
