@@ -9,7 +9,7 @@ export default function Footer() {
           <a href="https://github.com/palmarazmartinez/Weather-App-React" target="_blank" rel="noreferrer" className="gitLink">
             Open source code{" "}
           </a>{" "}
-           by Perla Almaraz{" "} and hosted on {" "}
+           by Perla Almaraz-Martinez{" "} and hosted on {" "}
            <a href="https://compassionate-goodall-fb2cc0.netlify.app/" target="_blank" rel="noreferrer" className="hostLink">
             Netlify</a>
         </i>{" "}
